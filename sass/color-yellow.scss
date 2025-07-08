@@ -1,0 +1,134 @@
+@import "variables";
+
+/*============================
+	Theme Color - Yellow
+==============================*/
+
+$theme-color: 			$yellow;
+$theme-hover-color :    darken($theme-color, 7%);
+
+:root,
+[data-bs-theme="light"] {
+	// Themecolor
+	--#{$prefix}themecolor: #{$theme-color};
+	--#{$prefix}themecolor-rgb: #{to-rgb($theme-color)};
+	
+	--#{$prefix}themehovercolor: #{$theme-hover-color};
+	--#{$prefix}themehovercolor-rgb: #{to-rgb($theme-hover-color)};
+	
+	--#{$prefix}link-color: var(--#{$prefix}themecolor);
+  	--#{$prefix}link-color-rgb: var(--#{$prefix}themecolor-rgb);
+	
+	--#{$prefix}link-hover-color: var(--#{$prefix}themehovercolor);
+	--#{$prefix}link-hover-color-rgb: var(--#{$prefix}themehovercolor-rgb);
+  	
+	--#{$prefix}success: var(--#{$prefix}themecolor);
+	--#{$prefix}success-rgb: var(--#{$prefix}themecolor-rgb);
+	
+	--#{$prefix}success: #{$green};
+	--#{$prefix}success-rgb: #{to-rgb($green)};
+	
+	--#{$prefix}primary: var(--#{$prefix}themecolor);
+	--#{$prefix}primary-rgb: var(--#{$prefix}themecolor-rgb);
+	
+	--#{$prefix}primary-text-emphasis: #{shade-color($theme-color, 60%)};
+	--#{$prefix}primary-bg-subtle: #{tint-color($theme-color, 80%)};
+	--#{$prefix}primary-border-subtle: #{tint-color($theme-color, 60%)};
+	
+	--#{$prefix}body-color: #{$body-color};
+	--#{$prefix}body-color-rgb: #{to-rgb($body-color)};
+	
+	--#{$prefix}heading-color: var(--bs-emphasis-color);
+	
+	// Font Families
+	--#{$prefix}body-font-family: #{$body-font-family};
+	--#{$prefix}heading-font-family: #{$heading-font-family};
+	
+	--#{$prefix}body-font-size: #{$body-font-size};
+	
+}
+
+@if $enable-dark-mode {
+  @include color-mode(dark, true) {
+    color-scheme: dark;
+	
+	--#{$prefix}link-color: var(--#{$prefix}themecolor);
+  	--#{$prefix}link-color-rgb: var(--#{$prefix}themecolor-rgb);
+	
+	--#{$prefix}link-hover-color: var(--#{$prefix}themehovercolor);
+	--#{$prefix}link-hover-color-rgb: var(--#{$prefix}themehovercolor-rgb);
+	
+	--#{$prefix}heading-color: var(--bs-emphasis-color);
+	
+	--#{$prefix}body-color: #{$body-color-dark};
+	--#{$prefix}body-color-rgb: #{to-rgb($body-color-dark)};
+
+	}
+}
+
+
+
+/* Other */
+
+.btn-primary{
+    --#{$prefix}btn-color: var(--#{$prefix}black);
+    --#{$prefix}btn-hover-color: var(--#{$prefix}black);
+}
+.btn-outline-primary{
+	--#{$prefix}btn-hover-color: var(--#{$prefix}black);
+}
+.pagination {
+	--#{$prefix}pagination-active-color: var(--#{$prefix}black);
+}
+
+/*== Overlay Menu ==*/
+.primary-menu{
+	&.navbar-overlay{
+		.navbar-toggler{
+			&.show span {
+				background: $black;
+			}
+		}
+		ul.navbar-nav{
+			li{
+				a{
+					color: $dark;
+				}
+				&:hover a:not(.btn):not(.active){
+					color:$black;
+				}
+				a.active:not(.btn){
+					color:rgba(0,0,0,0.4);
+				}
+			}
+			> li {
+				&.dropdown {
+				  .dropdown-menu {
+					li {
+						> a:not(.btn) {
+						  color:$dark;
+						}
+						&:hover > a:not(.btn), a.active:not(.btn) {
+						  color:$black;
+						}
+						a.active:not(.btn) {
+						  color:rgba(0,0,0,0.4);
+						}
+					}
+				  }
+				}
+			}
+		}
+		
+		.social-links {
+		    a {
+			  color: var(--#{$prefix}dark);
+			  &:hover {
+				color: var(--#{$prefix}black);
+			  }
+			}
+		}
+		
+	}
+	
+}

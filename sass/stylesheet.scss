@@ -1,0 +1,65 @@
+/*=================================================================================
+
+   Template Name: Namu - Personal Portfolio HTML Template
+   Author: Harnish Design
+   Template URL: http://demo.harnishdesign.net/html/namu
+   Author URL: https://themeforest.net/user/harnishdesign
+   File Description : Main css file of the template
+	
+===================================================================================
+  Table of Contents
+===================================================================================
+
+	1. Basic
+	2. Header
+		2.1 Navigation
+			  2.1.1 Hamburger Menu Button
+			  2.1.2 Responsive Navbar
+			  2.1.3 Overlay Menu
+		2.2 Secondary Nav
+		2.3 Page Header
+	3. Layouts
+	4. Elements
+		4.1 Featured Box
+		4.2 Team
+		4.3 Accordion
+		4.4 Nav
+		4.5 Hero Background
+		4.6 Owl Carousel
+		4.7 Brands Grid
+		4.8 Portfolio
+		4.9 List Style
+	5. Helpers Classes
+	6. Blog
+		6.1 List Item
+		6.2 Tags
+		6.3 Side Post
+		6.4 Post
+		6.5 Post Comment
+	7. Footer
+		7.1 Social Links
+		7.2 Social Icons
+		7.3 Back to Top
+	8. Extra
+
+==================================================================================*/
+
+// Initialize
+@import "variables";
+@import "mixins";
+
+// Bootstrap
+//@import "bootstrap/bootstrap";
+
+// Core CSS
+@import "root";
+@import "reset";
+
+// Content Blocks
+@import "header";
+@import "layouts";
+@import "elements";
+@import "helpers";
+@import "blog";
+@import "footer";
+@import "extras";
